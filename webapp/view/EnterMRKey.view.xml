@@ -1,12 +1,11 @@
-<mvc:View controllerName="EnterMRKey.controller.EnterMRKey" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="EnterMRKey.controller.EnterMRKey">
 	<App>
 		<pages>
-			<Page title="{i18n>title}">
+			<Page title="{i18n&gt;title}">
 				<content>
-					<Label text="{i18n>MRKey}"/>
- 					<Input value="42"/>
- 						<Button press="onSubmit"/>
+					<Label text="{i18n&gt;MRKey}"/>
+ 					<Input value="42" placeholder="{i18n&gt;MRKey_Placeholder}"/>
+ 						<Button press="onSubmit" text="{i18n&gt;ChooseMRKey}"/>
 				</content>
 			</Page>
 		</pages>
