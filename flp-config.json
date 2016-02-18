@@ -1,0 +1,34 @@
+{
+    "application": {
+        "id": "",
+        "title": "EnterMRKey",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#EnterMRKey-Display",
+        "navigationComponentName": "EnterMRKey",
+        "intentSemanticObject": "EnterMRKey",
+        "intentAction": "Display",
+        "html5ApplicationName": "entermrkey",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "541ae1dd-df2f-4f69-8c5e-1d3a9c48bd61-1455615371245"
+        ],
+        "contentPackages": [
+            "c5442921-df4f-4d30-becf-631a6b7ceb7d"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Enter Meterreading Key",
+        "subtitle": "Subtitle",
+        "searchKeywords": "Enter Meterreading Key,Subtitle",
+        "displayIconUrl": "sap-icon://enter-more",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
