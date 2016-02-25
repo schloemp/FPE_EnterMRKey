@@ -1,12 +1,33 @@
-<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="EnterMRKey.controller.EnterMRKey">
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:sap.ui.core="sap.ui.core" xmlns:sap.ui.layout.form="sap.ui.layout.form" controllerName="EnterMRKey.controller.EnterMRKey">
 	<App>
 		<pages>
 			<Page title="{i18n&gt;title}">
 				<content>
-					<Label text="{i18n&gt;MRKey}"/>
- 					<Input value="42" placeholder="{i18n&gt;MRKey_Placeholder}"/>
- 						<Button press="onSubmit" text="{i18n&gt;ChooseMRKey}"/>
+					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="false" layout="ResponsiveGridLayout" id="__form0">
+					    <sap.ui.layout.form:content>
+					        <sap.ui.core:Title text="Customer" id="__title0"/>
+					        <Input width="100%" id="__input1" editable="false" value="{data&gt;/CustomerName}"/></sap.ui.layout.form:content>
+					</sap.ui.layout.form:SimpleForm>
+					<SearchField width="100%" placeholder="Suchen" id="__field0"/>
+					<List noDataText="Drop list items here" id="__list0" selectionChange="onSelectionChanged" mode="SingleSelectMaster">
+					    <customData>
+					        <sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="sap-ui-fastnavgroup" value="true" writeToDom="true" id="__data2"/>
+					    </customData>
+					    <items>
+					        <StandardListItem type="Navigation" counter="10132" title="100345" description="Intermediate Reading" icon="sap-icon://line-charts" id="__item0" info="2016/02/03" infoState="None"/>
+					        <StandardListItem type="Navigation" counter="10450" title="100859" description="Periodic Reading" icon="sap-icon://line-charts" id="__item1" info="2016/02/23"/>
+					        <StandardListItem type="Navigation" counter="11678" title="106890" description="Periodic Reading" icon="sap-icon://line-charts" id="__item2" info="2016/03/23"/></items></List>
 				</content>
+			<footer>
+			    <Bar id="__bar0">
+			        <customData>
+			            <sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true" id="__data5"/>
+			        </customData>
+			    <contentRight>
+			        <Button press="onSubmit" text="{i18n&gt;ChooseMRKey}"/>
+			    </contentRight>
+			    </Bar>
+			</footer>
 			</Page>
 		</pages>
 	</App>
