@@ -27,8 +27,16 @@ sap.ui.define([
 			if (aEvent.getParameter("selected")) {
 				this.selectedKey = aEvent.getParameter("listItem").getTitle();
 				this.PEStepContainer.MROrderKey = this.selectedKey;
+				this.PEStepContainer.MROrderDate = aEvent.getParameter("listItem").getInfo();
+				this.PEStepContainer.MROrderType = aEvent.getParameter("listItem").getDescription();
+				this.PEStepContainer.Premise = "7805678";
+				this.PEStepContainer.Installation = "8064434";
 			} else {
 				this.PEStepContainer.MROrderKey = undefined;
+				this.PEStepContainer.MROrderDate = undefined;
+				this.PEStepContainer.MROrderType = undefined;
+				this.PEStepContainer.Premise = undefined;
+				this.PEStepContainer.Installation = undefined;
 			}
 		}
 	});
