@@ -8,3 +8,4 @@ mock_preview_sapui5.html
 /dist/
 /.project.json
 /flp-config.json
+/.user.project.json

@@ -7,12 +7,16 @@ sap.ui.define([
 		selectedKey: undefined,
 		PEStepContainer: undefined,
 		onInit: function() {
-			var lPE = sap.ushell.Container.getService("ProcessEngine");
-			this.PEStepContainer = lPE.getCurrentStepContainer();
-			var lModel = new JSONModel({
-				CustomerName: this.PEStepContainer.CustomerName
-			});
-			this.getView().setModel(lModel, "data");
+			if (sap.ushell && sap.ushell.services.ProcessEngine) {
+				var lPE = sap.ushell.Container.getService("ProcessEngine");
+				this.PEStepContainer = lPE.getCurrentStepContainer();
+				var lModel = new JSONModel({
+					CustomerName: this.PEStepContainer.CustomerName
+				});
+				this.getView().setModel(lModel, "data");
+			} else {
+				this.PEStepContainer = {};
+			}
 		},
 		onSubmit: function() {
 			if (this.selectedKey) {
