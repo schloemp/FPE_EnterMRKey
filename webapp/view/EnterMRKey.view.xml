@@ -1,33 +1,38 @@
-<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:sap.ui.core="sap.ui.core" xmlns:sap.ui.layout.form="sap.ui.layout.form" controllerName="EnterMRKey.controller.EnterMRKey">
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:sap.ui.core="sap.ui.core" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" controllerName="EnterMRKey.controller.EnterMRKey">
 	<App>
 		<pages>
 			<Page title="{i18n&gt;title}">
 				<content>
-					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="false" layout="ResponsiveGridLayout" id="__form0">
-					    <sap.ui.layout.form:content>
-					        <sap.ui.core:Title text="Customer" id="__title0"/>
-					        <Input width="100%" id="__input1" editable="false" value="{data&gt;/CustomerName}"/></sap.ui.layout.form:content>
+					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="__form0" layout="ResponsiveGridLayout">
+						<sap.ui.layout.form:content>
+							<sap.ui.core:Title id="__title0" text="Customer"/>
+							<Label id="__label0" text="Customer"/>
+							<Input editable="false" id="__input1" value="{data&gt;/CustomerName}" width="100%"/>
+							<Label id="__label2" text="Address" width="100%"/>
+							<Input editable="false" id="__input2" value="{data&gt;/CustomerAddress}" width="100%"/>
+						</sap.ui.layout.form:content>
 					</sap.ui.layout.form:SimpleForm>
-					<SearchField width="100%" placeholder="Suchen" id="__field0"/>
-					<List noDataText="Drop list items here" id="__list0" selectionChange="onSelectionChanged" mode="SingleSelectMaster">
-					    <customData>
-					        <sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="sap-ui-fastnavgroup" value="true" writeToDom="true" id="__data2"/>
-					    </customData>
-					    <items>
-					        <StandardListItem type="Navigation" counter="10132" title="100345" description="Intermediate Reading" icon="sap-icon://line-charts" id="__item0" info="2016/02/03" infoState="None"/>
-					        <StandardListItem type="Navigation" counter="10450" title="100859" description="Periodic Reading" icon="sap-icon://line-charts" id="__item1" info="2016/02/23"/>
-					        <StandardListItem type="Navigation" counter="11678" title="106890" description="Periodic Reading" icon="sap-icon://line-charts" id="__item2" info="2016/03/23"/></items></List>
+					<SearchField id="__field0" placeholder="Suchen" width="100%"/>
+					<List id="__list0" mode="SingleSelectMaster" noDataText="Drop list items here" selectionChange="onSelectionChanged">
+						<customData>
+							<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" id="__data2" key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+						</customData>
+						<items>
+							<StandardListItem counter="10132" description="Intermediate Reading" icon="sap-icon://line-charts" id="__item0" info="2016/02/03" infoState="None" title="100345" type="Navigation"/>
+							<StandardListItem counter="10450" description="Periodic Reading" icon="sap-icon://line-charts" id="__item1" info="2016/02/23" title="100859" type="Navigation"/>
+							<StandardListItem counter="11678" description="Periodic Reading" icon="sap-icon://line-charts" id="__item2" info="2016/03/23" title="106890" type="Navigation"/></items>
+					</List>
 				</content>
-			<footer>
-			    <Bar id="__bar0">
-			        <customData>
-			            <sap.ui.core:CustomData key="sap-ui-fastnavgroup" value="true" writeToDom="true" id="__data5"/>
-			        </customData>
-			    <contentRight>
-			        <Button press="onSubmit" text="{i18n&gt;ChooseMRKey}"/>
-			    </contentRight>
-			    </Bar>
-			</footer>
+				<footer>
+					<Bar id="__bar0">
+						<customData>
+							<sap.ui.core:CustomData id="__data5" key="sap-ui-fastnavgroup" value="true" writeToDom="true"/>
+						</customData>
+						<contentRight>
+							<Button press="onSubmit" text="{i18n&gt;ChooseMRKey}"/>
+						</contentRight>
+					</Bar>
+				</footer>
 			</Page>
 		</pages>
 	</App>
