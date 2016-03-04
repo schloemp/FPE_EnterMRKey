@@ -12,7 +12,8 @@ sap.ui.define([
 				this.PEStepContainer = lPE.getCurrentStepContainer();
 				if (this.PEStepContainer) {
 					var lModel = new JSONModel({
-						CustomerName: this.PEStepContainer.CustomerName
+						CustomerName: this.PEStepContainer.CustomerName,
+						CustomerAddress: this.PEStepContainer.CustomerAddress
 					});
 					this.getView().setModel(lModel, "data");
 				}
